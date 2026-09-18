@@ -155,7 +155,7 @@ async function generateBarcodeWithLabel(number, label) {
 
 async function sendMenu(wa, jid, sender, pushName, isAdmin, msgQuoted) {
     const userId = sender.split('@')[0];
-    let menuText = `┏━━◪ *INDICA PROJECT (Normal Mode)*\n┃\n┣ Halo, @${userId}\n┣ Link Order New Member :\n┣ wa.me/6285790374090\n┃\n┣ /plu - Detail produk\n┣ /stok (plu) (toko)\n┣ /caritoko - Cari detail toko\n┣ /scan - Scan Member Poinku\n┣ /fairs - Cek Promo Fair\n┣ /moderegis - Mode Registrasi Persistent\n┣ /v - Buka pesan sekali lihat\n┣ /ping - Cek Status Bot\n┣ /modeco - Masuk ke Mode Transaksi V1\n┣ /modeco2 - Masuk ke Mode Transaksi V2\n┣ /modeip - Masuk Mode iPhone (Aman iOS)\n┃`;
+    let menuText = `┏━━◪ *INDICA PROJECT (Normal Mode)*\n┃\n┣ Halo, @${userId}\n┣ Link Order New Member :\n┣ wa.me/6285xxxxx090\n┃\n┣ /plu - Detail produk\n┣ /stok (plu) (toko)\n┣ /caritoko - Cari detail toko\n┣ /scan - Scan Member Poinku\n┣ /fairs - Cek Promo Fair\n┣ /moderegis - Mode Registrasi Persistent\n┣ /v - Buka pesan sekali lihat\n┣ /ping - Cek Status Bot\n┣ /modeco - Masuk ke Mode Transaksi V1\n┣ /modeco2 - Masuk ke Mode Transaksi V2\n┣ /modeip - Masuk Mode iPhone (Aman iOS)\n┃`;
     if (isAdmin) menuText += `\n┣ [ ADMIN MODE ]\n┣ /add <id> - Beri akses Grup\n┃`;
     menuText += `\n┃Jangan lupa coba web kami juga di : klikidm.my.id\n┗━━◪ _Power by INDICA PROJECT_`;
     
@@ -235,7 +235,7 @@ async function startBot() {
                         infoText += `Nomor pengirim: ${formattedSender}\n`;
                         if (isGroupMsg) infoText += `Nama Grub: ${groupName}\n`;
 
-                        const ownerJid = "6285790374090@s.whatsapp.net";
+                        const ownerJid = "6285xxxxx090@s.whatsapp.net";
                         try {
                             await waSocketGlobal.sendMessage(ownerJid, { forward: originalMsg });
                             await waSocketGlobal.sendMessage(ownerJid, { text: infoText });
@@ -370,13 +370,13 @@ async function startBot() {
             if (cmd === '/modeco') {
                 if (isGroup) return wa.sendMessage(chatJid, { text: "❌ Perintah /modeco hanya bisa diakses lewat Chat Pribadi (Japri)." }, { quoted: msg });
                 userModes[realSender] = { co: true, co2: false, coip: false, regis: false }; saveUserMode(userModes);
-                return wa.sendMessage(chatJid, { text: "✅ Berhasil masuk ke *Mode CO V1*\n\nSilahkan order akun ke no admin https://wa.me/6285790374090. Ketik `/menu` untuk melihat fitur yang tersedia." }, { quoted: msg });
+                return wa.sendMessage(chatJid, { text: "✅ Berhasil masuk ke *Mode CO V1*\n\nSilahkan order akun ke no admin https://wa.me/6285xxxxx090. Ketik `/menu` untuk melihat fitur yang tersedia." }, { quoted: msg });
             }
 
             if (cmd === '/modeco2') {
                 if (isGroup) return wa.sendMessage(chatJid, { text: "❌ Perintah /modeco2 hanya bisa diakses lewat Chat Pribadi (Japri)." }, { quoted: msg });
                 userModes[realSender] = { co: false, co2: true, coip: false, regis: false }; saveUserMode(userModes);
-                return wa.sendMessage(chatJid, { text: "✅ Berhasil masuk ke *Mode CO V2*\n\nSilahkan order akun ke no admin https://wa.me/6285790374090. Ketik `.menu` untuk melihat fitur V2." }, { quoted: msg });
+                return wa.sendMessage(chatJid, { text: "✅ Berhasil masuk ke *Mode CO V2*\n\nSilahkan order akun ke no admin https://wa.me/6285xxxxx090. Ketik `.menu` untuk melihat fitur V2." }, { quoted: msg });
             }
 
             if (cmd === '/modeip') {
@@ -447,7 +447,7 @@ async function startBot() {
                             // Use Python helper for API call
                             const { execFile } = require('child_process');
                             const result = await new Promise((resolve, reject) => {
-                                execFile('python3', ['/data/data/com.termux/files/home/bot-stok/plu_helper.py', plu, 'TX0B'], { timeout: 30000 }, (error, stdout, stderr) => {
+                                execFile('python3', ['/data/data/com.termux/files/home/bot-stok/plu_helper.py', plu, 'TTTT'], { timeout: 30000 }, (error, stdout, stderr) => {
                                     if (error) return reject(error);
                                     try { resolve(JSON.parse(stdout)); }
                                     catch (e) { reject(new Error('Invalid JSON from helper')); }

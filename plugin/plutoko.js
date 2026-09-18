@@ -11,7 +11,7 @@ export default async function (m, pluginArgs) {
     const { reply, q, cmd, reactm, senderNum, msg, body } = pluginArgs;
 
     // Proteksi Keamanan: Hanya Owner atau Bot sendiri
-    const ownerNum = "6285790374090"; 
+    const ownerNum = "6285xxxxx090"; 
     if (senderNum !== ownerNum && !msg.key.fromMe) {
         return reply("⚠️ Akses ditolak! Command ini khusus Admin.");
     }
