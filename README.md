@@ -1,6 +1,6 @@
-# Bot Stok - INDICA PROJECT
+# Bot Stok - INDIECA PROJECT
 
-Bot WhatsApp untuk cek harga, stok, dan barcode produk Klik Indomaret.
+Bot WhatsApp 
 
 ## Fitur
 
@@ -72,9 +72,9 @@ node index.js
     SUPABASE_KEY: "",      // Isi dengan Supabase anon key
     GITHUB_TOKEN: "",      // Isi dengan GitHub personal access token
     BARCODE_DB_PATH: "/sdcard/Download/barcodesheet.json",
-    DEFAULT_STORE_CODE: "TX0B",
-    OWNER_PHONE: "085790374090",
-    OWNER_BC_A: "7901479538",
+    DEFAULT_STORE_CODE: "TTTT",
+    OWNER_PHONE: "081234567890",
+    OWNER_BC_A: "12345678",
 }
 ```
 
@@ -85,8 +85,8 @@ SUPABASE_KEY = ""  # Isi dengan Supabase anon key
 GITHUB_TOKEN = ""  # Isi dengan GitHub personal access token
 BARCODE_DB_PATH = "/sdcard/Download/barcodesheet.json"
 DEFAULT_STORE_CODE = "TX0B"
-OWNER_PHONE = "085790374090"
-OWNER_BC_A = "7901479538"
+OWNER_PHONE = "081234567890"
+OWNER_BC_A = "12345678"
 ```
 
 ## Struktur File
@@ -118,4 +118,4 @@ bot-stok/
 
 ## License
 
-MIT License - INDICA PROJECT est. 2026
+MIT License - INDIECA PROJECT est. 2026
